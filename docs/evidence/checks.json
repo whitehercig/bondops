@@ -1,0 +1,337 @@
+{
+  "program": "GtFrFiH2UxfLbiwAaEtVcfnNZ2zuygSmeqtRzfZ8tpQG",
+  "instrument": "8uHo2XN8YNYKs7NwLDPNBvd53dFdN7NufH6YjueekMgL",
+  "network": "http://127.0.0.1:18999",
+  "generatedAt": "2026-10-10T14:34:32.613Z",
+  "tests": [
+    {
+      "name": "Real SPL bond mint, custody and holder registry reconcile",
+      "ok": true
+    },
+    {
+      "name": "Issuance cannot reopen after seal",
+      "ok": true
+    },
+    {
+      "name": "Holder cannot transfer another holder’s position",
+      "ok": true
+    },
+    {
+      "name": "Insufficient position is rejected",
+      "ok": true
+    },
+    {
+      "name": "Zero-quantity transfers are rejected",
+      "ok": true
+    },
+    {
+      "name": "Issuer cannot withdraw custody tokens with its own signature",
+      "ok": true
+    },
+    {
+      "name": "Redemption requires all final coupon snapshots to be scheduled",
+      "ok": true
+    },
+    {
+      "name": "Only issuer may schedule corporate actions",
+      "ok": true
+    },
+    {
+      "name": "All future contractual actions are queued in advance",
+      "ok": true
+    },
+    {
+      "name": "Later action cannot snapshot ahead of an earlier record",
+      "ok": true
+    },
+    {
+      "name": "Redemption can only be scheduled once",
+      "ok": true
+    },
+    {
+      "name": "Early snapshots are rejected",
+      "ok": true
+    },
+    {
+      "name": "A late executor cannot permit post-record transfers",
+      "ok": true
+    },
+    {
+      "name": "Complete voting snapshot and slot persist on-chain",
+      "ok": true
+    },
+    {
+      "name": "Snapshot cannot be rewritten",
+      "ok": true
+    },
+    {
+      "name": "Wrong owner cannot cast a ballot",
+      "ok": true
+    },
+    {
+      "name": "Same holder cannot vote twice",
+      "ok": true
+    },
+    {
+      "name": "Transfers do not migrate or multiply snapshot voting rights",
+      "ok": true
+    },
+    {
+      "name": "Vote cannot be finalized before close",
+      "ok": true
+    },
+    {
+      "name": "50% quorum and strict majority are enforced on-chain",
+      "ok": true
+    },
+    {
+      "name": "Voting cannot resume after finalization",
+      "ok": true
+    },
+    {
+      "name": "Coupon entitlement = quantity × face × annual bps / (10000 × frequency)",
+      "ok": true
+    },
+    {
+      "name": "Coupon entitlements remain immutable after position transfers",
+      "ok": true
+    },
+    {
+      "name": "Underfunded action cannot pay its first holder",
+      "ok": true
+    },
+    {
+      "name": "Partial funding still cannot cause selective settlement",
+      "ok": true
+    },
+    {
+      "name": "Issuer cannot reclaim reserved cash before completion",
+      "ok": true
+    },
+    {
+      "name": "Funds cannot be redirected to a different beneficiary",
+      "ok": true
+    },
+    {
+      "name": "Duplicate payment is rejected",
+      "ok": true
+    },
+    {
+      "name": "Fresh executor resumes partial settlement without double payment",
+      "ok": true
+    },
+    {
+      "name": "Only completed actions release surplus funding back to issuer",
+      "ok": true
+    },
+    {
+      "name": "Maturity automatically locks transfers",
+      "ok": true
+    },
+    {
+      "name": "A coupon cannot be scheduled twice or beyond contractual count",
+      "ok": true
+    },
+    {
+      "name": "Unfunded redemption leaves bond supply intact",
+      "ok": true
+    },
+    {
+      "name": "Failed redemption rolls back registry changes and token burn",
+      "ok": true
+    },
+    {
+      "name": "Wrong redemption payee cannot burn the holder’s bonds",
+      "ok": true
+    },
+    {
+      "name": "Principal is paid and every corresponding token is burned atomically",
+      "ok": true
+    },
+    {
+      "name": "Completed redemption cannot pay or burn again",
+      "ok": true
+    },
+    {
+      "name": "Redeemed instrument cannot schedule new actions",
+      "ok": true
+    },
+    {
+      "name": "Coupon + voting + redemption lifecycle reconciles to zero outstanding supply",
+      "ok": true
+    }
+  ],
+  "finalSupply": "0",
+  "finalCashMicrounits": [
+    "8700000000",
+    "8900000000",
+    "4400000000"
+  ],
+  "receipts": [
+    {
+      "label": "Create DemoUSD and investor payment accounts",
+      "signature": "5Ezs3wwWHPc1tVEakwXxeQrUmsW59LZjRCFZaSW7Z1ERiF6bedqrNv2hpom4uGZrE7xfxd6R1C4LyJUFZzY7SKRd",
+      "at": 1791642806271
+    },
+    {
+      "label": "Create instrument and program custody",
+      "signature": "5B7RFvnMkb63fzFWeaDBsRuTTSfWehFs5x3s4sbjysfcB29318ZDXU2oTn3RgXBSCHYvFtY4t85Am2bCxUtHf3ta",
+      "at": 1791642806765
+    },
+    {
+      "label": "Issue 10 bonds to Aida",
+      "signature": "5fAJ5DdUQ5KqKXrxnGWvLP3pRvqgPDRPsBUbhQtTBRS89Ncwe9cWommxmezATwMeqp3ZiHQhzKVQnkVp46omCgGm",
+      "at": 1791642807230
+    },
+    {
+      "label": "Issue 6 bonds to Timur",
+      "signature": "3VrP7ww6djaZdB2cQMKRFKtdznaWZVRRqbnpjuRo9LsyRdxCf3iXp1NXnGv3tiZRipa1W5SdB3VWDhbRFYneGiWg",
+      "at": 1791642807718
+    },
+    {
+      "label": "Issue 4 bonds to Dana",
+      "signature": "5MHsHdJy9RDfubwHgoUpRmgtA3XwrUh3F7jCRcYCQv4nEBNJJiYuuVnjL1iWnF5qUrLbTMqJntS7ipmQU9YDe7fk",
+      "at": 1791642808234
+    },
+    {
+      "label": "Seal issuance · fixed supply",
+      "signature": "axDVhk77UcWcmrwPDSgMJAQUkSQHhf5CRqYAGojFKTX4JG22oRSQwoqZtXcvj5cv61DyU5AChej1LVhC4xQoQ7s",
+      "at": 1791642808623
+    },
+    {
+      "label": "Schedule voting",
+      "signature": "4nZCnogEYYtqafjdcn8hEhoU1abDHYpf4VEGsVNccH9xvXtrZhMakbHxsZAFyAsPS8MVy13zxrZfrsNK4T8Yer5j",
+      "at": 1791642809091
+    },
+    {
+      "label": "Queue coupon 1",
+      "signature": "4pk59NAapfq1GZvQbs7fJJmkZvVUqwhKVgbheJEs4EEFBdKbHyQmnWnPDDkVn6Eve2NaJWA5sAuA71Qxd1AKpgwr",
+      "at": 1791642809569
+    },
+    {
+      "label": "Queue final coupon",
+      "signature": "2tGTixQyF7M4x1oQuuZC4hfKqbK3AWtbYEe3ocrhvKciTWr74np32car9Cwqoq5QCWrUzCq3Km2gDCABZo9C9L9Y",
+      "at": 1791642810083
+    },
+    {
+      "label": "Queue maturity redemption",
+      "signature": "5Dg69okwz1GxsB7eBxamETHgtWkmCMQgKmk3tHo5kgyYriAQxeoUK8RAaqg3z6UWjKcw6hRt8dR76TxGGhkqdqUk",
+      "at": 1791642810474
+    },
+    {
+      "label": "Snapshot voting rights",
+      "signature": "23o8UnusSzMDLc7kioCjE78P5Ccs96vsQ2qaNKC6XHNMWDYtqwATjoGBPKyGozwbsvhGTGX3E8A3caR2KgBkdqXg",
+      "at": 1791642818467
+    },
+    {
+      "label": "Transfer 4 bonds after voting record",
+      "signature": "4oKJ6HQ3GMpfUrFjPCRNJZLQaRnjLTEAJ77PS2mQcx28hipZHG1igGVVxdSaDa8tSA682dyqXmXojc2K4ByHKyV8",
+      "at": 1791642818946
+    },
+    {
+      "label": "Aida votes yes with original weight",
+      "signature": "66qXLbAXj6pafEnNBrD6sZLDjnHNKodCffB8eUxA4pYTQi61LXhqT3nNjaaJLTqZR9pqGVQ6uPepJJ6ibi27vWeD",
+      "at": 1791642819456
+    },
+    {
+      "label": "Timur votes no",
+      "signature": "9Xuueg3zQrc9fz6ShpV5LwXufhm3uNJZUYBA1DU3CZfp4BTnKJ4kmh8jYdWzZnwEbAJgcuwG58hYYvCUsGxR1sk",
+      "at": 1791642819849
+    },
+    {
+      "label": "Finalize voting",
+      "signature": "uRFeT4Zd34h71sBDZ7v47uDkHh4NvzqBKbqkFSDTBL7h9TNKUtumuNGM2NaD1dsZiQgDUXGS1v7AQF6FM8TYheu",
+      "at": 1791642828748
+    },
+    {
+      "label": "Snapshot coupon 1",
+      "signature": "5hCKgffN6sZ6bAxN1nUkwm4zpXFV2Ae8FjRp4YjH9q8RaucajcopEti7hfh9KXz2JnzjHGJ6v3yCfAH5BUfasM97",
+      "at": 1791642836653
+    },
+    {
+      "label": "Transfer 2 bonds after coupon record",
+      "signature": "2EkDZtJDiq79rDLGvktzmtziBLCVeff8M4MqBdYCLmgo1ajproixzvjdR6GB8nmsxq273cEpSmiv7eBrgMTJUvep",
+      "at": 1791642837120
+    },
+    {
+      "label": "Partially fund coupon 1",
+      "signature": "3WsQn9F9MyrVDoNsHYpriV8Sprp3fyzggZfMqo5PAnnzS9naWL947MgehWsj2taJXJvTnhNkZaxa9y1uTnYyBYJa",
+      "at": 1791642837614
+    },
+    {
+      "label": "Fully fund coupon 1 with surplus",
+      "signature": "5kHmA9DzPc15qST1uK42SbGFBdrR2hh7MLDhyFASF4zFRiiw7yTqsFezk1PaSGz9TNvVRAZkjooMEMHXeVLbpeJc",
+      "at": 1791642838134
+    },
+    {
+      "label": "Settle first coupon holder",
+      "signature": "2tfq9KRKFxgJFQtPf43qKBmPzmYBBGMUwj9UrH3QKyPzb8k38g5Y7H1rdnAMqr7W3Dff61ygfpw6VmbBU9iYWJ5c",
+      "at": 1791642838504
+    },
+    {
+      "label": "Resume coupon settlement with investor executor",
+      "signature": "4SaVsWHPd1kx8h1K4wxEw3X8T7KNQgtnEuBDCUikiTwBFwhyCS4mWkiWvArFhmLhCPArY4K9iBMsPhNHUTQY9Jh4",
+      "at": 1791642839058
+    },
+    {
+      "label": "Resume coupon settlement with investor executor",
+      "signature": "23tHZ7bEjhbCVhgrGEJxQYkSCjLrqcKkt3fFPirTgBKLSMFfa1DW6ZTh2bJ9X3LcogFg3NiYz5n7zd8hUPwr8Xz5",
+      "at": 1791642839431
+    },
+    {
+      "label": "Reclaim one-microunit surplus",
+      "signature": "31SGbSk4KvVU6yHYCTNBgqUmLgVqJvNp9subtjP7Hc1gcDHZvJGh7YgDSHfhqsfcyRSoPCNe5s2kN9gmNFneHbda",
+      "at": 1791642839897
+    },
+    {
+      "label": "Snapshot final coupon",
+      "signature": "N5TxWLj4rv21Z1HN2tw2mGDMN8kDNUCRwei4zDe1ZZ4Twc7VHQqP3mFKLZVDTnpNqQGC5k8RwnPCiGBHWspJZnx",
+      "at": 1791642867281
+    },
+    {
+      "label": "Fund final coupon",
+      "signature": "31ZzUgfzp6Mwiq6ptpyoRQ1PabG4fFfjYBtVo7ayuqs82RfrzEbCHXXspHzWGg7aMCoUMS5huvimERH6Xr9WEFuw",
+      "at": 1791642867795
+    },
+    {
+      "label": "Settle final coupon",
+      "signature": "3uQbsoDMHLTvADPGJo6diWfmSK44FW4F3Qrvk4L1wKpP4ysSeWycKbXRB72g9vfRA9x8KwUFhe96vvwB6wx6wDdE",
+      "at": 1791642868312
+    },
+    {
+      "label": "Settle final coupon",
+      "signature": "591ST1wb43EUq7PfVj8Fa8kEoQok9Xu14EoA36MdnXKTW8HJTErxg4Q4y7hmbNKziDHvfWDcVwVKHBMRbSFfo9i7",
+      "at": 1791642868842
+    },
+    {
+      "label": "Settle final coupon",
+      "signature": "5PGvRyiG9u6YDeN7gpezqB7XQupXB7TsMHt6NJNRiVWR3zyJybMhRBEhK1jTAtwf7NQCqVeDJHkyGwu3rnoACDCC",
+      "at": 1791642869377
+    },
+    {
+      "label": "Snapshot redemption",
+      "signature": "Bx2BnwtAR9263qHducdfr72iR9h1aNNBwhGYwK8Pte4cKd3DCamKWmTt6UrfCfEVxeZmt94XrJucK28YYtwPxLK",
+      "at": 1791642869939
+    },
+    {
+      "label": "Fund redemption",
+      "signature": "5zfchHGAtJPL38mTczutzuXrz6V848Vg1BnrUnvLwqQBUuaAFHBaRYuAm5yE9tLTy33hNNT58abAHMKCz4aoeaq1",
+      "at": 1791642870652
+    },
+    {
+      "label": "Atomic principal payment and burn",
+      "signature": "3b76LCcMUxJrN7AfSvZBJrg3uc11924qVnykSX5HGwzzfVBSnk3J51f9PdsrAkJnhXDZYPfHXpcXFjWPzi19yger",
+      "at": 1791642871250
+    },
+    {
+      "label": "Atomic principal payment and burn",
+      "signature": "2gEBL1cAQGrWuguJ2arcmqvqiNt9iHd5yvLbBfzGbAREyqwNXUvd45WDr4DABkxpzp3v2rBMof2RJGG7UvFcdJdn",
+      "at": 1791642871971
+    },
+    {
+      "label": "Atomic principal payment and burn",
+      "signature": "5vEMgfhWtRVyQCBenq1GdNJeqTtV4iMLQwdQhvKPicJVYBPA1sR95y6YJCqYU7uku1MPrYWQThLZAEALK9coXDua",
+      "at": 1791642872578
+    }
+  ]
+}

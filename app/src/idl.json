@@ -1,0 +1,1113 @@
+{
+  "address": "GtFrFiH2UxfLbiwAaEtVcfnNZ2zuygSmeqtRzfZ8tpQG",
+  "metadata": {
+    "name": "bondops",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Verifiable bond servicing on Solana"
+  },
+  "instructions": [
+    {
+      "name": "cast_vote",
+      "discriminator": [20, 212, 15, 189, 69, 180, 69, 151],
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "action",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "index",
+          "type": "u8"
+        },
+        {
+          "name": "support",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "finalize_vote",
+      "discriminator": [181, 176, 6, 248, 249, 134, 146, 56],
+      "accounts": [
+        {
+          "name": "action",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "fund",
+      "discriminator": [218, 188, 111, 221, 152, 113, 174, 7],
+      "accounts": [
+        {
+          "name": "issuer",
+          "signer": true,
+          "relations": ["instrument"]
+        },
+        {
+          "name": "instrument",
+          "relations": ["action"]
+        },
+        {
+          "name": "action"
+        },
+        {
+          "name": "payment_mint",
+          "relations": ["instrument"]
+        },
+        {
+          "name": "source",
+          "writable": true
+        },
+        {
+          "name": "payment_vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112, 97, 121, 109, 101, 110, 116, 45, 118, 97, 117, 108, 116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "action"
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "initialize",
+      "discriminator": [175, 175, 109, 31, 13, 152, 155, 237],
+      "accounts": [
+        {
+          "name": "issuer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "instrument",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [105, 110, 115, 116, 114, 117, 109, 101, 110, 116]
+              },
+              {
+                "kind": "account",
+                "path": "issuer"
+              },
+              {
+                "kind": "arg",
+                "path": "id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "bond_mint",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "payment_mint"
+        },
+        {
+          "name": "bond_vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [98, 111, 110, 100, 45, 118, 97, 117, 108, 116]
+              },
+              {
+                "kind": "account",
+                "path": "instrument"
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "rent",
+          "address": "SysvarRent111111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "id",
+          "type": "u64"
+        },
+        {
+          "name": "face_value",
+          "type": "u64"
+        },
+        {
+          "name": "annual_bps",
+          "type": "u16"
+        },
+        {
+          "name": "frequency",
+          "type": "u8"
+        },
+        {
+          "name": "periods",
+          "type": "u8"
+        },
+        {
+          "name": "interval_seconds",
+          "type": "i64"
+        },
+        {
+          "name": "label",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "issue",
+      "discriminator": [190, 1, 98, 214, 81, 99, 222, 247],
+      "accounts": [
+        {
+          "name": "issuer",
+          "signer": true,
+          "relations": ["instrument"]
+        },
+        {
+          "name": "instrument",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [105, 110, 115, 116, 114, 117, 109, 101, 110, 116]
+              },
+              {
+                "kind": "account",
+                "path": "instrument.issuer",
+                "account": "Instrument"
+              },
+              {
+                "kind": "account",
+                "path": "instrument.id",
+                "account": "Instrument"
+              }
+            ]
+          }
+        },
+        {
+          "name": "bond_mint",
+          "writable": true,
+          "relations": ["instrument"]
+        },
+        {
+          "name": "bond_vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [98, 111, 110, 100, 45, 118, 97, 117, 108, 116]
+              },
+              {
+                "kind": "account",
+                "path": "instrument"
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "owner",
+          "type": "pubkey"
+        },
+        {
+          "name": "quantity",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "reclaim_excess",
+      "discriminator": [152, 75, 240, 22, 169, 147, 222, 129],
+      "accounts": [
+        {
+          "name": "issuer",
+          "signer": true,
+          "relations": ["instrument"]
+        },
+        {
+          "name": "instrument",
+          "relations": ["action"]
+        },
+        {
+          "name": "action"
+        },
+        {
+          "name": "payment_mint",
+          "relations": ["instrument"]
+        },
+        {
+          "name": "source",
+          "writable": true
+        },
+        {
+          "name": "payment_vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112, 97, 121, 109, 101, 110, 116, 45, 118, 97, 117, 108, 116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "action"
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "schedule_action",
+      "discriminator": [171, 106, 64, 203, 240, 236, 25, 28],
+      "accounts": [
+        {
+          "name": "issuer",
+          "writable": true,
+          "signer": true,
+          "relations": ["instrument"]
+        },
+        {
+          "name": "instrument",
+          "writable": true
+        },
+        {
+          "name": "action",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [97, 99, 116, 105, 111, 110]
+              },
+              {
+                "kind": "account",
+                "path": "instrument"
+              },
+              {
+                "kind": "arg",
+                "path": "nonce"
+              }
+            ]
+          }
+        },
+        {
+          "name": "payment_mint",
+          "relations": ["instrument"]
+        },
+        {
+          "name": "payment_vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112, 97, 121, 109, 101, 110, 116, 45, 118, 97, 117, 108, 116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "action"
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "rent",
+          "address": "SysvarRent111111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "nonce",
+          "type": "u64"
+        },
+        {
+          "name": "kind",
+          "type": "u8"
+        },
+        {
+          "name": "vote_record_at",
+          "type": "i64"
+        },
+        {
+          "name": "vote_duration",
+          "type": "i64"
+        },
+        {
+          "name": "proposal",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "seal",
+      "discriminator": [102, 202, 171, 163, 27, 152, 105, 242],
+      "accounts": [
+        {
+          "name": "issuer",
+          "signer": true,
+          "relations": ["instrument"]
+        },
+        {
+          "name": "instrument",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "settle",
+      "discriminator": [175, 42, 185, 87, 144, 131, 102, 212],
+      "accounts": [
+        {
+          "name": "instrument",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [105, 110, 115, 116, 114, 117, 109, 101, 110, 116]
+              },
+              {
+                "kind": "account",
+                "path": "instrument.issuer",
+                "account": "Instrument"
+              },
+              {
+                "kind": "account",
+                "path": "instrument.id",
+                "account": "Instrument"
+              }
+            ]
+          },
+          "relations": ["action"]
+        },
+        {
+          "name": "action",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [97, 99, 116, 105, 111, 110]
+              },
+              {
+                "kind": "account",
+                "path": "instrument"
+              },
+              {
+                "kind": "account",
+                "path": "action.nonce",
+                "account": "Action"
+              }
+            ]
+          }
+        },
+        {
+          "name": "bond_mint",
+          "writable": true,
+          "relations": ["instrument"]
+        },
+        {
+          "name": "payment_mint",
+          "relations": ["instrument"]
+        },
+        {
+          "name": "bond_vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [98, 111, 110, 100, 45, 118, 97, 117, 108, 116]
+              },
+              {
+                "kind": "account",
+                "path": "instrument"
+              }
+            ]
+          }
+        },
+        {
+          "name": "payment_vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112, 97, 121, 109, 101, 110, 116, 45, 118, 97, 117, 108, 116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "action"
+              }
+            ]
+          }
+        },
+        {
+          "name": "destination",
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "index",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "snapshot",
+      "discriminator": [144, 236, 6, 133, 233, 160, 21, 94],
+      "accounts": [
+        {
+          "name": "instrument",
+          "writable": true,
+          "relations": ["action"]
+        },
+        {
+          "name": "action",
+          "writable": true
+        },
+        {
+          "name": "bond_mint",
+          "relations": ["instrument"]
+        },
+        {
+          "name": "bond_vault",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [98, 111, 110, 100, 45, 118, 97, 117, 108, 116]
+              },
+              {
+                "kind": "account",
+                "path": "instrument"
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "transfer_position",
+      "discriminator": [139, 130, 102, 147, 135, 77, 113, 222],
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "instrument",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "recipient",
+          "type": "pubkey"
+        },
+        {
+          "name": "quantity",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Action",
+      "discriminator": [144, 241, 105, 219, 74, 136, 203, 176]
+    },
+    {
+      "name": "Instrument",
+      "discriminator": [59, 14, 92, 146, 115, 34, 155, 145]
+    }
+  ],
+  "events": [
+    {
+      "name": "PositionChanged",
+      "discriminator": [185, 99, 23, 242, 206, 25, 115, 41]
+    },
+    {
+      "name": "SettlementRecorded",
+      "discriminator": [192, 74, 226, 15, 81, 160, 21, 189]
+    },
+    {
+      "name": "SnapshotRecorded",
+      "discriminator": [238, 89, 139, 114, 10, 83, 172, 36]
+    },
+    {
+      "name": "VoteRecorded",
+      "discriminator": [72, 160, 49, 123, 215, 219, 68, 221]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "InvalidTerms",
+      "msg": "Invalid instrument terms"
+    },
+    {
+      "code": 6001,
+      "name": "InvalidPaymentMint",
+      "msg": "Payment mint must have 6 decimals"
+    },
+    {
+      "code": 6002,
+      "name": "Overflow",
+      "msg": "Checked arithmetic overflow"
+    },
+    {
+      "code": 6003,
+      "name": "IssuanceClosed",
+      "msg": "Issuance is closed"
+    },
+    {
+      "code": 6004,
+      "name": "Matured",
+      "msg": "Instrument matured or transfers are unavailable"
+    },
+    {
+      "code": 6005,
+      "name": "InvalidQuantity",
+      "msg": "Invalid position quantity or recipient"
+    },
+    {
+      "code": 6006,
+      "name": "UnknownHolder",
+      "msg": "Unknown holder"
+    },
+    {
+      "code": 6007,
+      "name": "InsufficientPosition",
+      "msg": "Insufficient position"
+    },
+    {
+      "code": 6008,
+      "name": "RecordDateLocked",
+      "msg": "Record date reached: transfers locked until snapshot"
+    },
+    {
+      "code": 6009,
+      "name": "ActionPending",
+      "msg": "Instrument is not sealed or is already redeeming"
+    },
+    {
+      "code": 6010,
+      "name": "InvalidAction",
+      "msg": "Invalid corporate action or state"
+    },
+    {
+      "code": 6011,
+      "name": "AllCouponsScheduled",
+      "msg": "All coupons already scheduled"
+    },
+    {
+      "code": 6012,
+      "name": "FinalCouponRequired",
+      "msg": "Schedule and snapshot the final coupon before redemption"
+    },
+    {
+      "code": 6013,
+      "name": "MissedRecordDate",
+      "msg": "Record date missed: historical balances cannot be reconstructed"
+    },
+    {
+      "code": 6014,
+      "name": "TooEarly",
+      "msg": "On-chain record date or close time has not arrived"
+    },
+    {
+      "code": 6015,
+      "name": "RegistryMismatch",
+      "msg": "Token supply, vault and registry do not reconcile"
+    },
+    {
+      "code": 6016,
+      "name": "AlreadySettled",
+      "msg": "This entitlement was already settled"
+    },
+    {
+      "code": 6017,
+      "name": "WrongBeneficiary",
+      "msg": "Account is not owned by the recorded beneficiary"
+    },
+    {
+      "code": 6018,
+      "name": "Underfunded",
+      "msg": "Fund the complete outstanding obligation before settlement"
+    },
+    {
+      "code": 6019,
+      "name": "VotingClosed",
+      "msg": "Voting window is closed"
+    },
+    {
+      "code": 6020,
+      "name": "AlreadyVoted",
+      "msg": "Holder already voted"
+    },
+    {
+      "code": 6021,
+      "name": "RegistryFull",
+      "msg": "Registry capacity is 32 wallets"
+    },
+    {
+      "code": 6022,
+      "name": "QueueFull",
+      "msg": "Pending action capacity is 32"
+    }
+  ],
+  "types": [
+    {
+      "name": "Action",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "instrument",
+            "type": "pubkey"
+          },
+          {
+            "name": "nonce",
+            "type": "u64"
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "status",
+            "type": "u8"
+          },
+          {
+            "name": "record_at",
+            "type": "i64"
+          },
+          {
+            "name": "close_at",
+            "type": "i64"
+          },
+          {
+            "name": "amount_per_bond",
+            "type": "u64"
+          },
+          {
+            "name": "coupon_number",
+            "type": "u8"
+          },
+          {
+            "name": "snapshot_slot",
+            "type": "u64"
+          },
+          {
+            "name": "snapshot_at",
+            "type": "i64"
+          },
+          {
+            "name": "total_quantity",
+            "type": "u64"
+          },
+          {
+            "name": "total_due",
+            "type": "u64"
+          },
+          {
+            "name": "total_paid",
+            "type": "u64"
+          },
+          {
+            "name": "burned_quantity",
+            "type": "u64"
+          },
+          {
+            "name": "yes_weight",
+            "type": "u64"
+          },
+          {
+            "name": "no_weight",
+            "type": "u64"
+          },
+          {
+            "name": "quorum_met",
+            "type": "bool"
+          },
+          {
+            "name": "passed",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "proposal",
+            "type": "string"
+          },
+          {
+            "name": "entries",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "Entitlement"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Entitlement",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "quantity",
+            "type": "u64"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "paid",
+            "type": "bool"
+          },
+          {
+            "name": "voted",
+            "type": "bool"
+          },
+          {
+            "name": "support",
+            "type": "bool"
+          },
+          {
+            "name": "settled_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Holder",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "quantity",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Instrument",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "u64"
+          },
+          {
+            "name": "issuer",
+            "type": "pubkey"
+          },
+          {
+            "name": "bond_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "payment_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "face_value",
+            "type": "u64"
+          },
+          {
+            "name": "annual_bps",
+            "type": "u16"
+          },
+          {
+            "name": "frequency",
+            "type": "u8"
+          },
+          {
+            "name": "periods",
+            "type": "u8"
+          },
+          {
+            "name": "interval_seconds",
+            "type": "i64"
+          },
+          {
+            "name": "started_at",
+            "type": "i64"
+          },
+          {
+            "name": "maturity",
+            "type": "i64"
+          },
+          {
+            "name": "outstanding",
+            "type": "u64"
+          },
+          {
+            "name": "sealed",
+            "type": "bool"
+          },
+          {
+            "name": "phase",
+            "type": "u8"
+          },
+          {
+            "name": "coupons_scheduled",
+            "type": "u8"
+          },
+          {
+            "name": "next_action",
+            "type": "u64"
+          },
+          {
+            "name": "pending_record",
+            "type": "i64"
+          },
+          {
+            "name": "pending_action",
+            "type": "pubkey"
+          },
+          {
+            "name": "redemption_scheduled",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "label",
+            "type": "string"
+          },
+          {
+            "name": "holders",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "Holder"
+                }
+              }
+            }
+          },
+          {
+            "name": "pending",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "PendingAction"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "PendingAction",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "address",
+            "type": "pubkey"
+          },
+          {
+            "name": "record_at",
+            "type": "i64"
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PositionChanged",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "instrument",
+            "type": "pubkey"
+          },
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "quantity",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SettlementRecorded",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "action",
+            "type": "pubkey"
+          },
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "retired",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SnapshotRecorded",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "action",
+            "type": "pubkey"
+          },
+          {
+            "name": "record_at",
+            "type": "i64"
+          },
+          {
+            "name": "slot",
+            "type": "u64"
+          },
+          {
+            "name": "total_quantity",
+            "type": "u64"
+          },
+          {
+            "name": "total_due",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoteRecorded",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "action",
+            "type": "pubkey"
+          },
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "support",
+            "type": "bool"
+          },
+          {
+            "name": "weight",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ]
+}

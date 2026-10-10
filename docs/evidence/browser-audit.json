@@ -1,0 +1,349 @@
+{
+  "product": "BondOps",
+  "version": "0.1.0",
+  "network": "http://127.0.0.1:18999",
+  "program": "GtFrFiH2UxfLbiwAaEtVcfnNZ2zuygSmeqtRzfZ8tpQG",
+  "instrument": "GarKk5Fr7vnZnx7cVeq37Cmpx84RESHAo2cu1VtGcD4M",
+  "generatedAt": "2026-10-10T14:43:21.595Z",
+  "chainTime": 1791643398,
+  "limitations": [
+    "DemoUSD is a test token, not dollars.",
+    "Program custody; maximum 32 holders.",
+    "Identity and KASE connectivity are simulated.",
+    "Timetable accelerated for demonstration."
+  ],
+  "terms": {
+    "faceValueMicrounits": "1000000000",
+    "annualBps": 1000,
+    "frequency": 2,
+    "maturity": "1791642937"
+  },
+  "reconciliation": {
+    "outstanding": "0",
+    "tokenSupply": "0",
+    "custody": "0",
+    "totalDue": "22000000000",
+    "totalPaid": "22000000000"
+  },
+  "holders": [
+    {
+      "owner": "8TRYXi4Mi9EmVvMmkaiktVgZwBZrV3ARNEpX7m97DRdi",
+      "quantity": "0"
+    },
+    {
+      "owner": "81vF27V7UGcECxwwZqtFuefSTVXyeBmLCuY5B8E6XKXt",
+      "quantity": "0"
+    },
+    {
+      "owner": "5qNk1kSxiKS3YDD1rexc9p49brLQGKbqiaaHjfi252hf",
+      "quantity": "0"
+    }
+  ],
+  "actions": [
+    {
+      "address": "suwZ14g6SbQAhWL8BXAw1KCxaQfPRYnfgqAaGT6jpzi",
+      "kind": "Bondholder vote",
+      "status": 2,
+      "recordAt": "1791642826",
+      "snapshotSlot": "456",
+      "snapshotAt": "1791643004",
+      "totalDue": "0",
+      "totalPaid": "0",
+      "burnedQuantity": "0",
+      "quorumMet": false,
+      "passed": false,
+      "entries": [
+        {
+          "owner": "8TRYXi4Mi9EmVvMmkaiktVgZwBZrV3ARNEpX7m97DRdi",
+          "quantity": "10",
+          "amount": "0",
+          "paid": false,
+          "voted": false,
+          "support": false,
+          "settledAt": "0"
+        },
+        {
+          "owner": "81vF27V7UGcECxwwZqtFuefSTVXyeBmLCuY5B8E6XKXt",
+          "quantity": "6",
+          "amount": "0",
+          "paid": false,
+          "voted": false,
+          "support": false,
+          "settledAt": "0"
+        },
+        {
+          "owner": "5qNk1kSxiKS3YDD1rexc9p49brLQGKbqiaaHjfi252hf",
+          "quantity": "4",
+          "amount": "0",
+          "paid": false,
+          "voted": false,
+          "support": false,
+          "settledAt": "0"
+        }
+      ]
+    },
+    {
+      "address": "H61nUV9AL5smwJpPM4uRL7e2ft1BmLE75hx39B2xR9io",
+      "kind": "Coupon 1",
+      "status": 2,
+      "recordAt": "1791642877",
+      "snapshotSlot": "610",
+      "snapshotAt": "1791643084",
+      "totalDue": "1000000000",
+      "totalPaid": "1000000000",
+      "burnedQuantity": "0",
+      "quorumMet": false,
+      "passed": false,
+      "entries": [
+        {
+          "owner": "8TRYXi4Mi9EmVvMmkaiktVgZwBZrV3ARNEpX7m97DRdi",
+          "quantity": "10",
+          "amount": "500000000",
+          "paid": true,
+          "voted": false,
+          "support": false,
+          "settledAt": "1791643094"
+        },
+        {
+          "owner": "81vF27V7UGcECxwwZqtFuefSTVXyeBmLCuY5B8E6XKXt",
+          "quantity": "6",
+          "amount": "300000000",
+          "paid": true,
+          "voted": false,
+          "support": false,
+          "settledAt": "1791643133"
+        },
+        {
+          "owner": "5qNk1kSxiKS3YDD1rexc9p49brLQGKbqiaaHjfi252hf",
+          "quantity": "4",
+          "amount": "200000000",
+          "paid": true,
+          "voted": false,
+          "support": false,
+          "settledAt": "1791643133"
+        }
+      ]
+    },
+    {
+      "address": "6xfYgosJpufpZGbeCUvMyvdb97fUiWo7h5jFszaXqApT",
+      "kind": "Coupon 2",
+      "status": 2,
+      "recordAt": "1791642937",
+      "snapshotSlot": "705",
+      "snapshotAt": "1791643134",
+      "totalDue": "1000000000",
+      "totalPaid": "1000000000",
+      "burnedQuantity": "0",
+      "quorumMet": false,
+      "passed": false,
+      "entries": [
+        {
+          "owner": "8TRYXi4Mi9EmVvMmkaiktVgZwBZrV3ARNEpX7m97DRdi",
+          "quantity": "10",
+          "amount": "500000000",
+          "paid": true,
+          "voted": false,
+          "support": false,
+          "settledAt": "1791643143"
+        },
+        {
+          "owner": "81vF27V7UGcECxwwZqtFuefSTVXyeBmLCuY5B8E6XKXt",
+          "quantity": "6",
+          "amount": "300000000",
+          "paid": true,
+          "voted": false,
+          "support": false,
+          "settledAt": "1791643143"
+        },
+        {
+          "owner": "5qNk1kSxiKS3YDD1rexc9p49brLQGKbqiaaHjfi252hf",
+          "quantity": "4",
+          "amount": "200000000",
+          "paid": true,
+          "voted": false,
+          "support": false,
+          "settledAt": "1791643144"
+        }
+      ]
+    },
+    {
+      "address": "6MnaQbAqAXXQgfcugmTEQ2cWauVt9C93CSzuDGQ7ebqr",
+      "kind": "Principal redemption",
+      "status": 2,
+      "recordAt": "1791642937",
+      "snapshotSlot": "726",
+      "snapshotAt": "1791643145",
+      "totalDue": "20000000000",
+      "totalPaid": "20000000000",
+      "burnedQuantity": "20",
+      "quorumMet": false,
+      "passed": false,
+      "entries": [
+        {
+          "owner": "8TRYXi4Mi9EmVvMmkaiktVgZwBZrV3ARNEpX7m97DRdi",
+          "quantity": "10",
+          "amount": "10000000000",
+          "paid": true,
+          "voted": false,
+          "support": false,
+          "settledAt": "1791643153"
+        },
+        {
+          "owner": "81vF27V7UGcECxwwZqtFuefSTVXyeBmLCuY5B8E6XKXt",
+          "quantity": "6",
+          "amount": "6000000000",
+          "paid": true,
+          "voted": false,
+          "support": false,
+          "settledAt": "1791643153"
+        },
+        {
+          "owner": "5qNk1kSxiKS3YDD1rexc9p49brLQGKbqiaaHjfi252hf",
+          "quantity": "4",
+          "amount": "4000000000",
+          "paid": true,
+          "voted": false,
+          "support": false,
+          "settledAt": "1791643154"
+        }
+      ]
+    }
+  ],
+  "browserReceipts": [
+    {
+      "label": "Principal redemption · Dana",
+      "signature": "2McvNqbGC7aD9d7mgUFEs44BKT7k3gyMSNFcwZvdVxRxDkcpi74P4EChoYVa2By2aumoK9iY4THqWVZCf3X78hSE",
+      "at": 1791643155458
+    },
+    {
+      "label": "Principal redemption · Timur",
+      "signature": "sygmzPxgJmva313zWfJNGwPiR6VpzJ1DpUmxKdWSryfM8faLJrQRHKUBRdRwY18BMeQyrbxMogUtX8VhGyrkFLz",
+      "at": 1791643154934
+    },
+    {
+      "label": "Principal redemption · Aida",
+      "signature": "2NMhmAeCo2qmCvULwT7gyvzkaTBn8Ww4taKuaGKFTSj3p31KNqTtjwXQQo9hsiRHEWNkULrjQMUqeGYyYPAh9Dgg",
+      "at": 1791643154388
+    },
+    {
+      "label": "Fund action vault",
+      "signature": "8HJjYWEVsBUnBPMXXqiZeJEEJyarGxYvEaRnyYq54uBKzqPbWmKkNJEXdN4s49EtKSEitqLRo2B15vh7zyn1Ssg",
+      "at": 1791643153870
+    },
+    {
+      "label": "Record immutable snapshot",
+      "signature": "64qDf3Z3G5vF7ooU7xjzDYXXLPx4x1afGYbQ2F9qHotTQrjw3frxPABhFKmgLozXPk2JzNnSXnL4NTi4NN2Qe6ju",
+      "at": 1791643146596
+    },
+    {
+      "label": "Coupon 2 · Dana",
+      "signature": "4NMVV3eS6DcRjVq9M4PR7Y5eRsTRcHC3i4rZmX6zkzszpBaGvgueyHjAjYJaPhw87tRgNs5VeM33FibWb2vThzbC",
+      "at": 1791643145546
+    },
+    {
+      "label": "Coupon 2 · Timur",
+      "signature": "4mNe8LQ5H1kvpiKhMRLeFPPhmnni2w4vnmNZVpFfowobpXx5F5VU5eCGcUFnvusGvHuLtygXpCbZyd2H9jJ9P6ZB",
+      "at": 1791643145030
+    },
+    {
+      "label": "Coupon 2 · Aida",
+      "signature": "2gDRnKtTDUNY12rqnoh912xQAg1pSShA651Y5Kn8VXac2CAigmEDKehj2BYzUWXQewN5soMdJAV2P9XPZ94Ak1br",
+      "at": 1791643144499
+    },
+    {
+      "label": "Fund action vault",
+      "signature": "2KdULej3UyFBEHbGmMNBfgkXcwqhHNuVqBYkDMToD5nGaEGWvz6757LAkTtRB64PTMk7AnHEn7fCDwkzfgeuqVLk",
+      "at": 1791643144074
+    },
+    {
+      "label": "Record immutable snapshot",
+      "signature": "3J6Ku83njH6rGWQivTwAbaxNoJ3Lsd4UNfkm3rLT7Kde8ZFBEVaQuXb2tNMt5Qn8yKu7KNVHB1qKVguon5JtBFUM",
+      "at": 1791643135665
+    },
+    {
+      "label": "Coupon 1 · Dana",
+      "signature": "4E2AsseCvpH3VCZeNTXV1vjudNjXmq75PiBrj1nQ35XiXk9bjtdFQk6B7uEB6jhvMTBjxeGzFk9NRFmHYNSTRzB8",
+      "at": 1791643134609
+    },
+    {
+      "label": "Coupon 1 · Timur",
+      "signature": "5MuR17deo8W8RK255Au47mxdop1em2byeEjywVLD5qE9HHtWNDyQ2jtnqYSzbMUgzZxKWrWq7WQoNt2NKBg5KTo7",
+      "at": 1791643134163
+    },
+    {
+      "label": "Coupon 1 · Aida",
+      "signature": "46dAbMcYonpb7igZL4uBk7cFpAo4PypCbwpo7diQAAPkJtwuwQXtwQh2GJww3R8XfdDSKKj2Pkk6Jwsxsh4BCzHn",
+      "at": 1791643095440
+    },
+    {
+      "label": "Fund action vault",
+      "signature": "5ZpnXdFB4eXgHPYfxkXGPuRaCHQMcYPKPeoftF1vBkZFRSWUVYTtgvnzTcwK2ixjBTokBRBMhq2PVGY76M5V2Bax",
+      "at": 1791643094935
+    },
+    {
+      "label": "Record immutable snapshot",
+      "signature": "4mvsBhZWyF4qHToqq4LNMaJoXhnyCWusjWtpPu8t1bztZ6uTGKTseAU7KQJubSdwEECGxdvu4vbNhFPPMybMHF5n",
+      "at": 1791643086080
+    },
+    {
+      "label": "Finalize vote",
+      "signature": "44AcXisNkvii1Tk1JxYq6st5j9VN7ZiqZqFzqH2kBDdWc1t2HXVrZ3WJY2hq9NfUi2EHFPN6ZipU5ai4yG7ZiBSL",
+      "at": 1791643085040
+    },
+    {
+      "label": "Record immutable snapshot",
+      "signature": "5wJB1voNrRaxst9EkTBzemUzoqUZjb4MVdY6G7teShqy65CwTKLt9ecuGp8HTKSvEeouMe6LMCXSVG7EtcpZKLJD",
+      "at": 1791643005431
+    },
+    {
+      "label": "Queue maturity redemption",
+      "signature": "kvqSwB7jJcGvvb4bNnR3NSv7TkMdLnyxMvHb71BxnC2hduJfKg1iS8fgBPihyEpY6EFMwh2mMFeRCJqdFWGTn5t",
+      "at": 1791642821713
+    },
+    {
+      "label": "Queue contractual coupon",
+      "signature": "5fTXitbh9hek8HWkKpTs3zLLii3YEA7oyu64r2RGZF8U3Nt76AsjoNTonwiPmWmQ7rhELi9XRdoNR6p8VP4z1TVL",
+      "at": 1791642821256
+    },
+    {
+      "label": "Queue contractual coupon",
+      "signature": "3GR5qcfFaXFCf9tebEYw8TsoDZGdNJN5xHwbn5gbdW1vPHoawYm6xpEu37RPZjch3aPJKcC578RJg9Gh8N6xUrMU",
+      "at": 1791642820792
+    },
+    {
+      "label": "Schedule reporting vote",
+      "signature": "5csfriY2ThhKYq6iAvniS4rVWLYfiWJs1HTD9HEGB4QG8i2UYuyzCVwTjyG4G8c72oY6hzws46a9MJtdhL6xUgqe",
+      "at": 1791642820378
+    },
+    {
+      "label": "Seal issuance · fixed supply",
+      "signature": "4hfg26EfENwpp1NaePuMkU1FAVtjUhXoFkGh672bEQFZbLGb3ypEdv5RSAkUwx5t8tJ2dUPes5rPMr1QDxoUc7ef",
+      "at": 1791642819849
+    },
+    {
+      "label": "Issue 4 bonds to Dana",
+      "signature": "5RATpsWDUMydj7uTTyUAXRCNSC9edsedwF7rJnYzqnH7rJFdrVW4SXYCMPU9FNSzvA2tZwA12hKFBm5sKgP6E2v9",
+      "at": 1791642819456
+    },
+    {
+      "label": "Issue 6 bonds to Timur",
+      "signature": "63pNA5VPR8a4V3XYrFVVkycQ35AA3y9F75p3xtJgy8ysbm2cXCjvd8oNnrkKyamwqtfnyH4RTaUb2D8KADSddyYV",
+      "at": 1791642818946
+    },
+    {
+      "label": "Issue 10 bonds to Aida",
+      "signature": "5VQ9tehrQ9s7DgQjChnCMWHLiQDx8ysFs1TiL5ConiAH4r7SrZYbjNEkTVgzfajegTK96UFgbWUDf7HPfVeXbqcH",
+      "at": 1791642818467
+    },
+    {
+      "label": "Create instrument and program custody",
+      "signature": "4FFBrpP5TZGLCsmmtLbcBVDCU1aEJiYk4k9wVrHB4srAcF58WahDH9dmSSmzYRJvyHN5DQq31wCh2YvUp8nSgCBj",
+      "at": 1791642818008
+    },
+    {
+      "label": "Create DemoUSD and investor payment accounts",
+      "signature": "2xp9TXv2CZTSgE7CvKjVxGStdNJgE8Ed6FkwzEf2YYGD7WRK35dYpvPyFQkSd2vQQqQgHkWVsBoTPjxeVsYF2tTJ",
+      "at": 1791642817611
+    }
+  ]
+}

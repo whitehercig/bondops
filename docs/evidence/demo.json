@@ -1,0 +1,211 @@
+{
+  "program": "GtFrFiH2UxfLbiwAaEtVcfnNZ2zuygSmeqtRzfZ8tpQG",
+  "instrument": "D8SKGWsc3GGMKyjMM2PQT2LngwwNAabUV46VSynqeNiU",
+  "network": "http://127.0.0.1:18999",
+  "generatedAt": "2026-10-10T14:38:54.195Z",
+  "finalSupply": "0",
+  "finalCashMicrounits": [
+    "6800000000",
+    "10800000000",
+    "4400000000"
+  ],
+  "actions": [
+    {
+      "address": "13kz3Nx9CH3wbTQejXMmCQ6BpkyxE6HdNgPoGoMvze3Y",
+      "name": "Bondholder vote",
+      "recordAt": "1791643064",
+      "snapshotSlot": "571",
+      "totalDue": "0",
+      "totalPaid": "0",
+      "burned": "0",
+      "passed": true
+    },
+    {
+      "address": "76MFw3YCeSJfwrYMhPjRq3qE53hGxngo6nurGzGEM8fd",
+      "name": "Coupon 1",
+      "recordAt": "1791643092",
+      "snapshotSlot": "626",
+      "totalDue": "1000000000",
+      "totalPaid": "1000000000",
+      "burned": "0",
+      "passed": false
+    },
+    {
+      "address": "DwrgPHJkUDKtr9w3XZsuoyhzvWZ6M4MSAd9uEkUCqhBG",
+      "name": "Coupon 2",
+      "recordAt": "1791643127",
+      "snapshotSlot": "693",
+      "totalDue": "1000000000",
+      "totalPaid": "1000000000",
+      "burned": "0",
+      "passed": false
+    },
+    {
+      "address": "4kbrUnV6x18iw6mzWt2YXUNHBLA4ABb594Piexg61kjX",
+      "name": "Principal redemption",
+      "recordAt": "1791643127",
+      "snapshotSlot": "698",
+      "totalDue": "20000000000",
+      "totalPaid": "20000000000",
+      "burned": "20",
+      "passed": false
+    }
+  ],
+  "receipts": [
+    {
+      "label": "Create DemoUSD and investor payment accounts",
+      "signature": "4kfmKZ6nGGVBHpDXN6oe7wHDJFTbbr9E3Fs3EjhcjSmH8NVTZcPGZWpNDxy7RosMAWk9rB21AKwe52pKarHPbFxb",
+      "at": 1791643058368
+    },
+    {
+      "label": "Create instrument and program custody",
+      "signature": "3zkAc9gDszqGSEqpYXicNXGt9hM5Q51Su2yD8gvjk1cMvt9D8rzR3jXNWYMQDfC7iCC4eYNqTxzp3u65U8w7s4sQ",
+      "at": 1791643058813
+    },
+    {
+      "label": "Issue 10 bonds to Aida",
+      "signature": "2KdG4H2k8hmKXXNGkzPonwFpJD6MtkjrYEKM2Yo9dxhATxjXukavhXL2h8FcsiVfUsHQ9jgwQFAHs51Q7sCLHXDB",
+      "at": 1791643059347
+    },
+    {
+      "label": "Issue 6 bonds to Timur",
+      "signature": "2zwpqkuKMZDLtPPb9FHh1REyJgjSEwHz4CkyodnAUthPdkcGorSwHrQDGSvmkJPeqeTSshgWiJm8bhmmiSheAAro",
+      "at": 1791643059866
+    },
+    {
+      "label": "Issue 4 bonds to Dana",
+      "signature": "3jKFew49YRUuQKeXhoNwLTpAzAq3bwAAK3g1UWRxaDwFfQsf2UkNhUg36V6ZVnxfwWkRNfdiVHDcQPU6ujrytLHa",
+      "at": 1791643060373
+    },
+    {
+      "label": "Seal issuance · fixed supply",
+      "signature": "3txd8HNzd6JVgvkAEVEcUixoMpe7Hucsj725de4H39fZMyxucS8ga43vuTco3smNpoBfvvnr2mb2sCugXSHEdG21",
+      "at": 1791643060940
+    },
+    {
+      "label": "Schedule reporting vote",
+      "signature": "5vCoEzr8dR9WpHt8wWcaduagLsk4wHAPmZrGojrqwLm4VVkPW4hrLdNmBvVPp8d1Phh3qFbiZoA638PjQZbQRb6u",
+      "at": 1791643061475
+    },
+    {
+      "label": "Snapshot voting rights",
+      "signature": "67ibtqCkLuseC3Ut9cRtTajhAaMKBdsQgAjTadwrognXcq4fx449K4k7jcB8WKc2SgUfUVjm9SQr4wTjf6RcneiH",
+      "at": 1791643065780
+    },
+    {
+      "label": "Vote investor 1",
+      "signature": "36q9gWMQcaaUY5HZSkFZAYK2i3GsTSqETgbiegSw7m1zQ7EmoUq22rE9vhCeMBgjTKrhMux4TbC4X7oLuhXBHEBC",
+      "at": 1791643066294
+    },
+    {
+      "label": "Vote investor 2",
+      "signature": "3bfvgo7Z3aKwfrbXNDW1Uzp159wwbrQFKbeUnycSyyWSyfc2ZctvdiZPRD6myyc9DLeD8tfCJpBL9s88ygYFDG5i",
+      "at": 1791643066823
+    },
+    {
+      "label": "Vote investor 3",
+      "signature": "4FEprv7J3eowLaNQ8CQk9Yc7a9P8ztQFZhAiCh9XhSvLKDL2UFcrhU7ceAfJvZJR3MqFeZHhysjeJH25RS4U8T34",
+      "at": 1791643067344
+    },
+    {
+      "label": "Queue first coupon",
+      "signature": "2u2Gi1QXVomWVbbBUADnxzuDbaYp528HizQFE12R8c4us2HK1umx6DrbpXfqyeiKebUkuyyRGPcJHP69wnumTXQE",
+      "at": 1791643067879
+    },
+    {
+      "label": "Queue final coupon",
+      "signature": "7fNbKjUF7AbcwNygSeJFtU5MVyMteYbHBAtm7XYB81C2Sf2VPEbFL2qHFAsuiB2XWCGQiaHNc3L7sBrgaUgdiem",
+      "at": 1791643068403
+    },
+    {
+      "label": "Queue redemption",
+      "signature": "2pH8jHWsgqQJZ7eXjoWD8bVbcNCfNUZB3Et1x62LbgVJrVtGxRfjMMpsNir5NtTbUt7w2uuHEY8c3AFST48z2ugJ",
+      "at": 1791643068921
+    },
+    {
+      "label": "Finalize reporting vote",
+      "signature": "4eV7Ab6yArK597xMd4sXY89jGCoASMV3uNwmQvt2PM8PxHQb8uiNfEYdL1o3aAiXcibjxsWqWJ27BLdMfgm8ToND",
+      "at": 1791643076154
+    },
+    {
+      "label": "Snapshot coupon 1",
+      "signature": "4jrSLnsLGnBWjxujqo8JKgZYoqTHJJsdRNLHBFkeSE3hKZmcXMBJNnYCSeiKhukYRyLUwBRTzJWaHtbYz9uqGWaZ",
+      "at": 1791643094482
+    },
+    {
+      "label": "Transfer four bonds after record date",
+      "signature": "2UgUCR1a2uManL9uBjzpdHCMnKkYPSQ6HopmcsSbaH8GBrTbeGUktGRXu3A1vRvvjTywc6CZnya1tF9X3CbHUbgr",
+      "at": 1791643094935
+    },
+    {
+      "label": "Fund coupon 1",
+      "signature": "5FLLHcZAwpMR8o7CDpwktsbD7rKBLCbVM7gcC4AghdN6GaQg8Eni44bNuFUSoYxtPaY779JTmkBvEAmHytiUPMy2",
+      "at": 1791643095440
+    },
+    {
+      "label": "Coupon 1 · holder 1",
+      "signature": "3pHx7k7akqjLRxWFv6FCtZXDJsC9VHqsAWMSLBxJqntrcHE76bV9pvV6pEo7qs9zGnHV7H37LfxYDD6z63RZLKVn",
+      "at": 1791643095978
+    },
+    {
+      "label": "Coupon 1 · holder 2",
+      "signature": "474TfKfE6oWqWdrQPUafYPTEwMs3Ahw5pi79PfhehoWadTSyEm9LnmW5ZAsAJLam1MdiDtfddnoQfGqycnBe5Bau",
+      "at": 1791643096526
+    },
+    {
+      "label": "Coupon 1 · holder 3",
+      "signature": "5wQAMbBHKTF8W75VC79VEtAupy6gDqE6zFtWvfsHPzSwHbaytpkTfRuf3QzNiAbcQiMsVvKcam6cBAYWqvM5Myza",
+      "at": 1791643097040
+    },
+    {
+      "label": "Snapshot final coupon",
+      "signature": "2BmW6MJsmzhf7pJDpgshnXSN39kmGcPC7Hhm33pubDG4DVcqvDRWZzYd8G6KekpaAG8NkA4Qr5gAP81HFBRsdc9L",
+      "at": 1791643129429
+    },
+    {
+      "label": "Fund coupon 2",
+      "signature": "2vkUG7ajdHwDC8mdCzUxKjhMGKgB8Hutfqvm4X6hHxkqnUgTSZHAMg7JeCPGbEBhuMf5iDonJbecDpm75ztMxZoV",
+      "at": 1791643130032
+    },
+    {
+      "label": "Coupon 2 · holder 1",
+      "signature": "4W5SCiYuyANgDjJCzsGbuMbLr79Si4NpXR53DoDewrJhu1vqApmiSaTRUWoTg2S996Qzw5xrpo1fbtzqnP2PkehL",
+      "at": 1791643130561
+    },
+    {
+      "label": "Coupon 2 · holder 2",
+      "signature": "vKpbiZLyTsS1rjroUMZg5jjiopsHCNVEnT4wRPNRgfEvnfnxdfWUf24HWcSoN1K1pgFsPbANyNuB9msfPskzWMT",
+      "at": 1791643130999
+    },
+    {
+      "label": "Coupon 2 · holder 3",
+      "signature": "7chrer8WBhjbq6RuMfFiGhdXT2c8E7HdVFGHdXirgb1xoGNhYZcsHmMniS2kL9JphMw7AWRnucMxgcTiSqPKEFT",
+      "at": 1791643131526
+    },
+    {
+      "label": "Snapshot principal rights",
+      "signature": "5SFrN7wGhmcLhih5empmChX6vddVmRXu25mxMjvJxd1vGeEf6jsx6V6rNnPYanh4AaD1CH6FHb6JRoDM7EaXyZEM",
+      "at": 1791643132064
+    },
+    {
+      "label": "Fund principal",
+      "signature": "3GpSH4bRBZaqNWVBtc4Brd4ATF9QVa1zKiGcupt44KBgTNYAKStF99QWhCciPXRvhbBWtwUgJYmQYcpS1tTtoXGG",
+      "at": 1791643132589
+    },
+    {
+      "label": "Atomic redemption · holder 1",
+      "signature": "aZ6gVxQ9gb3Mccf35fV2W4qi7n51ufHx7dTyseeGs1QYDaHF6zyR3A3923p678j1CFJ7zvUC6sL3ar5RS8AV3rJ",
+      "at": 1791643133124
+    },
+    {
+      "label": "Atomic redemption · holder 2",
+      "signature": "51zgPfajuTBhJht89Ymga62aHKb5BXTmNFqAm4KjMGT6zY2Sd3wuc4pVN7Et9fV1LV5LTYqKDUzvTFG2sckMM7KY",
+      "at": 1791643133639
+    },
+    {
+      "label": "Atomic redemption · holder 3",
+      "signature": "4fsBacfjk8vkmuC7nkgeNvabMdBeqyLjiJkHN61jTjauFLUmX8LTxRdeVqi72tXpfVe4JKqRyrcQCgkAZ2mqmis",
+      "at": 1791643134163
+    }
+  ]
+}

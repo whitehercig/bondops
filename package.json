@@ -1,0 +1,34 @@
+{
+  "name": "bondops",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config app/vite.config.ts --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build --config app/vite.config.ts && node scripts/package-site.mjs",
+    "program:build": "bash scripts/build-program.sh",
+    "localnet": "bash scripts/localnet.sh",
+    "test:chain": "tsx tests/chain.ts",
+    "demo": "tsx scripts/demo.ts",
+    "deploy:devnet": "bash scripts/deploy-devnet.sh"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "0.31.1",
+    "@solana/spl-token": "0.4.14",
+    "@solana/web3.js": "1.98.4",
+    "buffer": "6.0.3",
+    "lucide-react": "0.468.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/bn.js": "5.1.6",
+    "@types/node": "22.10.2",
+    "@types/react": "19.0.3",
+    "@types/react-dom": "19.0.2",
+    "@vitejs/plugin-react": "4.3.4",
+    "tsx": "4.23.15",
+    "typescript": "5.7.2",
+    "vite": "6.4.4"
+  }
+}
