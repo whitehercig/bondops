@@ -88,6 +88,8 @@ Do not commit `.local/`, `target/deploy/*keypair.json` or browser signing keys. 
 - [Technical overview](docs/TECHNICAL_OVERVIEW.md)
 - [Demo video script](docs/DEMO_SCRIPT.md)
 - [Submission description](docs/SUBMISSION.md)
+- [Colosseum form copy](docs/COLOSSEUM_COPY.md)
+- [Recording checklist](docs/RECORDING_CHECKLIST.md)
 - [Verification evidence and remaining work](docs/VERIFICATION.md)
 
 Source structure: `programs/bondops/src/lib.rs` (program), `app/src/client.ts` (RPC client), `app/src/App.tsx` (product), `tests/chain.ts` (integration checks), `scripts/demo.ts` (executor).
